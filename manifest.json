@@ -1,0 +1,19 @@
+{
+  "manifest_version": 2,
+  "name": "Mage.Space Manager",
+  "version": "1.0",
+  "description": "A Chrome plugin that waits for the presence of a button and clicks it.",
+  "permissions": ["activeTab","storage"],
+  "icons": {
+    "16": "icon-16.png",
+    "48": "icon-48.png",
+    "128": "icon-128.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["http://*/*", "https://*/*"],
+      "js": ["manager.js"],
+      "run_at": "document_end"
+    }
+  ]
+}
